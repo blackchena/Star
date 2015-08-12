@@ -13,7 +13,11 @@ Important: For 64-bit and iPhone OS applications, there is a linker bug that pre
 
 -force_load所做的事情跟-all_load其实是一样的，但是-force_load需要指定要进行全部加载的库文件的路径，这样的话，你就只是完全加载了一个库文件，不影响其余库文件的按需加载。
 ## 静态库访问资源文件
+```objective-c
 NSString *path = [[NSBundle mainBundle] pathForResource:@"Myframework" ofType:@"bundle"];
 NSBundle *resourcesBundle = [NSBundle bundleWithPath:path];
 As for images you can just prepend Myframework.bundle/ to their names:
 [UIImage imageNamed:@"Myframework.bundle/MyImage"
+```
+##NSDate 封装
+https://github.com/MatthewYork/DateTools
