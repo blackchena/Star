@@ -27,6 +27,9 @@ CBStoreHouseRefreshControl
 
 ##不要在init和dealloc函数中使用accessor(Don’t Use Accessor Methods in Initializer Methods and dealloc)
 init 里面不用 setter 不是内存问题，而是 setter 可能会触发其他的逻辑，例如重写的 setter 方法或者 KVC，将可能调用其他还没来得及 init 的变量，最终导致不可预计行为！
-http://joywii.github.io/blog/2015/03/05/bu-yao-zai-objective-cde-inithe-dealloczhong-xiang-zi-ji-fa-song-xiao-xi/
-http://blog.devtang.com/blog/2011/08/10/do-not-use-accessor-in-init-and-dealloc-method/
-http://dijkst.github.io/blog/2013/12/07/bu-yao-zai-initializer-he-dealloc-fang-fa-zhong-shi-yong-setter-he-getter/
+- [参考文献翻译](http://joywii.github.io/blog/2015/03/05/bu-yao-zai-objective-cde-inithe-dealloczhong-xiang-zi-ji-fa-song-xiao-xi/) 
+- [唐巧](http://blog.devtang.com/blog/2011/08/10/do-not-use-accessor-in-init-and-dealloc-method/)
+- [上面引用](http://dijkst.github.io/blog/2013/12/07/bu-yao-zai-initializer-he-dealloc-fang-fa-zhong-shi-yong-setter-he-getter/)
+
+
+
