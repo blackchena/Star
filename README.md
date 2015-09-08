@@ -35,4 +35,9 @@ init 里面不用 setter 不是内存问题，而是 setter 可能会触发其�
 ##Xcode 设置
 ###环境变量
 - https://developer.apple.com/library/ios/documentation/DeveloperTools/Reference/XcodeBuildSettingRef/1-Build_Setting_Reference/build_setting_ref.html#//apple_ref/doc/uid/TP40003931-CH3-SW105
+##CoreData
+临时的NSManagedObject
+- [如何用Temporary Deal NSManagedObject实例](http://www.helplib.com/qa/587047)
+- [如何应对临时NSManagedObject实例](http://www.ophome.cn/question/17483)
+
 
