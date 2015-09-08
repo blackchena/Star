@@ -32,5 +32,7 @@ init 里面不用 setter 不是内存问题，而是 setter 可能会触发其�
 - [上面引用](http://dijkst.github.io/blog/2013/12/07/bu-yao-zai-initializer-he-dealloc-fang-fa-zhong-shi-yong-setter-he-getter/)
 - http://qualitycoding.org/objective-c-init/
 
-
+##Xcode 设置
+###环境变量
+- https://developer.apple.com/library/ios/documentation/DeveloperTools/Reference/XcodeBuildSettingRef/1-Build_Setting_Reference/build_setting_ref.html#//apple_ref/doc/uid/TP40003931-CH3-SW105
 
