@@ -40,4 +40,34 @@ init 里面不用 setter 不是内存问题，而是 setter 可能会触发其�
 - [如何用Temporary Deal NSManagedObject实例](http://www.helplib.com/qa/587047)
 - [如何应对临时NSManagedObject实例](http://www.ophome.cn/question/17483)
 
+##宏定义
+#define语句中的#是把参数字符串化，##是连接两个参数成为一个整体。
+#define FACTORY_REF(name) { #name, Make##name }
+中#name就是将传入的name进行字符串化，Make##name就是将Make跟name进行连接，使它们成为一个整体。
+```objective-c
+#define FACTORY_CREATE(name) \
+static sp<MediaSource> Make##name(const sp<MediaSource> &source) { \ 
+return new name(source); \
+}
+#define FACTORY_CREATE_ENCODER(name) \
+static sp<MediaSource> Make##name(const sp<MediaSource> &source, const sp<MetaData> &meta) { \ 
+return new name(source, meta); \
+}
+#define FACTORY_REF(name) 
+{#name,Make##name},
+FACTORY_CREATE(MP3Decoder)
+FACTORY_CREATE(AMRNBDecoder)
+FACTORY_CREATE(AMRWBDecoder)
+FACTORY_CREATE(AACDecoder)
+FACTORY_CREATE(AVCDecoder)
+FACTORY_CREATE(G711Decoder)
+FACTORY_CREATE(M4vH263Decoder)
+FACTORY_CREATE(VorbisDecoder)
+FACTORY_CREATE(VPXDecoder)
+FACTORY_CREATE_ENCODER(AMRNBEncoder)
+FACTORY_CREATE_ENCODER(AMRWBEncoder)
+FACTORY_CREATE_ENCODER(AACEncoder)
+FACTORY_CREATE_ENCODER(AVCEncoder)
+FACTORY_CREATE_ENCODER(M4vH263Encoder)
+```
 
