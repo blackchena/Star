@@ -70,4 +70,6 @@ FACTORY_CREATE_ENCODER(AACEncoder)
 FACTORY_CREATE_ENCODER(AVCEncoder)
 FACTORY_CREATE_ENCODER(M4vH263Encoder)
 ```
-
+##应用被拒
+ MFi - Program Authorization 
+external-accessory 在你的info.list 
