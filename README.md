@@ -73,3 +73,5 @@ FACTORY_CREATE_ENCODER(M4vH263Encoder)
 ##应用被拒
  MFi - Program Authorization 
 external-accessory 在你的info.list 
+##Conflicting constraints debug
+Make a symbolic breakpoint at UIViewAlertForUnsatisfiableConstraints to catch this in the debugger
